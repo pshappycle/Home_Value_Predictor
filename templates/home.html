@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>RF ML API</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/style.css">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+
+
+          <a class="navbar-brand" href="/">Home
+            <img class="nav-ufo" src="static/images/ufo.svg">
+
+          </a>
+
+        </div>
+          <div class="dropdown">
+          <button class="dropbtn">Collaborators</button>
+          <div class="dropdown-content">
+          <a href="{{ url_for('daniel')}}">Daniel</a>
+          <a href="{{ url_for('nate')}}">Nate</a>
+          <a href="{{ url_for('peter')}}">Peter</a>
+          <a href="{{ url_for('presentation')}}">Presentation</a>
+          </div>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+    <div class="hero text-center" style="background-image: url('../static/images/nasa.jpg');">
+      <h1 class="title">Ames, IA Real Estate Calculator</h1>
+      <p class="title">The Truth is Out There</p>
+      <p class="title"><a href="{{ url_for('nate')}}">Nate Berman</a></p>
+      <p class="title"><a href="{{ url_for('daniel')}}">Daniel Bradley</a></p>
+      <p class="title"><a href="{{ url_for('peter')}}">Peter Shapiro</a></p>
+    </div>
+    <div class="container">
+      <div class="row margin-top-50">
+        <div class="col-md-3">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Features</div>
+              <div class="panel-body">
+                    <form action="{{ url_for('predict')}}"method="post">
+                      <input type="text" name="OverallQual" placeholder="Overall Quality(1-10)" required="required" />
+                      <input type="text" name="YearBuilt" placeholder="Year Built (1990)" required="required" />
+                      <input type="text" name="YearRemodAdd" placeholder="Remodel Added (1990)" required="required" />
+                      <input type="text" name="TotalBsmtSF" placeholder="Basement Square Feet" required="required" />
+                      <input type="text" name="1stFlrSF" placeholder="First Floor Square Feet" required="required" />
+                      <input type="text" name="GrLivArea" placeholder="Greater Living Area" required="required" />
+                      <input type="text" name="FullBath" placeholder="# of Full Baths" required="required" />
+                      <input type="text" name="TotRmsAbvGrd" placeholder="# Rooms Above Ground" required="required" />
+                      <input type="text" name="GarageCars" placeholder="Garage Car Capacity" required="required" />
+                      <input type="text" name="GarageArea" placeholder="Garage Area in Sq Ft" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-9">
+          <div id="table-area" class="">
+           
+            <div id="zillow-large-search-box-widget-container" style="width:432px;overflow:hidden;background-color:#e7f1fd;color:#555; font: normal normal normal 13px verdana,arial,sans-serif;line-height:13px;margin:0 auto;padding:0;text-align:center;border:1px solid #adcfff;letter-spacing:0;text-transform:none;"><h2 style="color:#d61;text-align:left;font-size:20px;line-height:20px;font-weight:normal;float:left;width:200px;margin-left:10px;margin-top:5px;letter-spacing:0;text-transform:none;">Find Homes</h2><div style="float:right;"><a href="https://www.zillow.com/" target="_blank" rel="nofollow"><img alt="Zillow Real Estate Information" style="border:0;" src="https://www.zillow.com/widgets/GetVersionedResource.htm?path=%2Fstatic%2Fimages%2Fpowered-by-zillow.gif"></img></a></div><iframe scrolling="no" src="https://www.zillow.com/widgets/search/LargeSearchBoxWidget.htm?did=zillow-large-search-box-iframe-widget&type=iframe&rgname=Ames+IA&shvi=yes" width="430" frameborder="0" height="400"></iframe><table id="zillow-tnc-widget-footer-links" width="100%" style="font: normal normal normal 10px verdana,arial,sans-serif;text-align:left;line-height:12px;margin:10px 5px;padding:0;border-spacing:0;border-collapse:collapse;"><tbody style="margin:0;padding:0;"><tr style="margin:0;padding:0;"><td style="font-weight:bold;font-size:10px;color:#555;text-align:left;margin:0;padding:0;">QUICK LINKS:</td></tr><tr style="margin:0;padding:0;"><td style="margin:0;padding:0;"><span id="widgetFooterLink" class="regionBasedLink"><a href="https://www.zillow.com/ames-ia/" target="_blank" rel="nofollow" style="color:#36b;font-family:verdana,arial,sans-serif;font-size:10px;margin:0 5px 0 0;padding:0;text-decoration:none;"><span class="region">Ames</span> Real Estate Listing</a></span></td><td style="margin:0;padding:0;"><span id="widgetFooterLink"><a href="https://www.zillow.com/mortgage-rates/" target="_blank" rel="nofollow" style="color:#36b;font-family:verdana,arial,sans-serif;font-size:10px;margin:0 5px 0 0;padding:0;text-decoration:none;">Mortgage Rates</a></span></td><td style="margin:0;padding:0;"><span id="widgetFooterLink"><a href="https://www.zillow.com/refinance/" target="_blank" rel="nofollow" style="color:#36b;font-family:verdana,arial,sans-serif;font-size:10px;margin:0 5px 0 0;padding:0;text-decoration:none;">Refinancing</a></span></td></tr><tr style="margin:0;padding:0;"><td style="margin:0;padding:0;"><span id="widgetFooterLink" class="regionBasedLink"><a href="https://www.zillow.com/ames-ia/foreclosures/" target="_blank" rel="nofollow" style="color:#36b;font-size:10px;margin:0 5px 0 0;padding:0;text-decoration:none;"><span class="region">Ames</span> Foreclosures</a></span></td><td style="margin:0;padding:0;"><span id="widgetFooterLink"><a href="https://www.zillow.com/mortgage-calculator/" target="_blank" rel="nofollow" style="color:#36b;font-size:10px;margin:0 5px 0 0;padding:0;text-decoration:none;">Mortgage Calculators</a></span></td><td style="margin:0;padding:0;"><span id="widgetFooterLink"><a href="https://www.zillow.com/mortgage-rates/" target="_blank" rel="nofollow" style="color:#36b;font-size:10px;margin:0 5px 0 0;padding:0;text-decoration:none;">Purchase Loans</a></span></td></tr></tbody></table></div>
+
+            <strong>{{ prediction_text }}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="bottom">Columbia Bootcamp 2020</span>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <!--script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script-->
+</body>
+
+</html>

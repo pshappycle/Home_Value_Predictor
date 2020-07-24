@@ -4,12 +4,8 @@
 
 import numpy as np
 import pandas as pd
-import datetime as dt
 
-import sqlalchemy
-from sqlalchemy.ext.automap import automap_base
-from sqlalchemy.orm import Session
-from sqlalchemy import create_engine, func
+
 import numpy as np
 import pickle
 
@@ -35,7 +31,7 @@ model = pickle.load(open('rf_model.pkl','rb'))
 @app.route("/")
 def home():
     """All available api routes"""
-    return render_template('index.html')
+    return render_template('home.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -45,15 +41,33 @@ def predict():
 
     output = round(prediction[0],2)
 
-    return render_template('index.html', prediction_text='Home Value should be $ {}'.format(output))
+    return render_template('index.html', prediction_text='Home Value Estimation $ {}'.format(output))
 
-@app.route('/predict_api',methods=['POST'])
-def predict_api():
-    data = requests.get_json(force=True)
-    prediction = model.predict([np.array(list(data.values()))])
+@app.route('/daniel')
+def daniel():
 
-    output = prediction[0]
-    return jsonify(output)
+    return render_template('daniel.html')
+
+@app.route('/nate')
+def nate():
+    
+    return render_template('nate.html')
+
+@app.route('/peter')
+def peter():
+    
+
+    return render_template('peter.html')
+
+@app.route('/presentation')
+def presentation():
+    
+
+    return render_template('presentation.html')
+
+
+
+
     
 if __name__==  '__main__':
     app.run(debug=True)

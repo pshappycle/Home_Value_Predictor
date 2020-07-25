@@ -25,4 +25,4 @@ Ordinary Least Squares Multiple Regression:
     -Mean_Squared_Error: .0945
     -Score of testing model: 91.3%
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)/static/images/ols_regression.svg?raw=true)
+![Residuals](https://octodex.github.com/static/images/ols_regression.svg?raw=true)

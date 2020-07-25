@@ -25,4 +25,4 @@ Ordinary Least Squares Multiple Regression:
     -Mean_Squared_Error: .0945
     -Score of testing model: 91.3%
 
-![alt text](https://github.com/pshapycle/House_Prices_Advanced_Regression_Techniques/static/images/ols_regression.svg?raw=true)
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)/static/images/ols_regression.svg?raw=true)

@@ -62,7 +62,17 @@
             <div class="panel panel-default">
               <div class="panel-heading">Description</div>
               <div class="panel-body">
-                <p style="margin-left: 5px">We started with 1460 records comprising of 80 Features.  During the exploration process we discovered multiple categorical features with missing values.  </p>
+                <p style="margin-left: 5px">I started with 1460 records comprising of 80 Features.  During the exploration process I discovered multiple categorical features with missing values.  These features with missing values were removed.  Next the features were greatly reduced by selecting only those with a correlation to Sale Price greater than 0.5.  </p>
+                
+                <p style="margin-left: 5px">The data was randomly divided into training and testing sets.  I then used Random Forest Regression with RandomizedSearchCV to find the best parameters for the model.
+                </p>
+                
+                <p style="margin-left: 5px">The training data has a score of 0.978 and the testing data had a score of 0.867 with a mean square error of 729555657.23!  
+                </p>
+                
+                <p style="margin-left: 5px">Following the RandomizedSearchCV the training data has a score of 0.917 and a testing score of 0.883 with a mean square error of 654125368.41!
+                </p>
+                <br>
                 <div class="row">
                   <div  data-tooltip="This image shows the Feature importance calculated from the random forest regression.  The Overall Quality is shown to hold the heaviest weight with Sale Price.">
                   <img " src="static/images/feature_importances.png" style="margin-left:25px">
@@ -75,6 +85,11 @@
                 </div>
                   
                 </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
                 <br>
                 
               </div>

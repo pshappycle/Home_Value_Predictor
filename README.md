@@ -25,4 +25,4 @@ Ordinary Least Squares Multiple Regression:
     -Mean_Squared_Error: .0945
     -Score of testing model: 91.3%
 
-![Residuals](https://octodex.github.com/static/images/ols_regression.svg?raw=true)
+![Residuals](https://pshappycle.github.com/static/images/ols_regression.svg?raw=true)

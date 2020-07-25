@@ -25,4 +25,4 @@ Ordinary Least Squares Multiple Regression:
     -Mean_Squared_Error: .0945
     -Score of testing model: 91.3%
 
-![Residuals](https://https://github.com/pshappycle/House_Prices_Advanced_Regression_Techniques/static/images/ols_regression.svg)
+![Residuals](https://github.com/pshappycle/House_Prices_Advanced_Regression_Techniques/static/images/ols_regression.svg)

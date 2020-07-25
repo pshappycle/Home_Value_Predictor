@@ -59,15 +59,58 @@
         <div class="col-md-3">
           <aside class="filters">
             <div class="panel panel-default">
-              <div class="panel-heading">Features</div>
+              <div class="panel-heading">Description</div>
               <div class="panel-body">
-            
+                <p>We started with 1,460 records and 80 features. Upon research, we noticed a majority of categorical features had null values. In order to effectively clean the model, I removed all features with null values. At this point I evaluated which numerical features had the highest correlation to SalePrice. I then reviewed the data to find that it was not normally distributed. 
+
+                <p>We used a Box-Cox transformation to normalize the data. I then randomly divided the data into a train and test set. I then used a Lasso Regression with GridSearchCV to find the best alpha and train and test the model.</p>
+
+                <p>I used an alpha of 0.001 and the training data had a score of 83.4% and the testing data had a score of 86.5% and a MSE of 0.145. </p>
+
               </div>
             </div>
           </aside>
         </div>
         <div class="col-md-9">
 
+        <div class="box">
+
+          <h5 class="title">Visualizations Summary</h5>
+
+          <hr>
+
+          <div class="container">
+
+            <div class="row" style="padding-bottom: 30px;">
+
+              <div class="col-9">
+
+                  <img class="panel" src="static/images/Orig_distro.png" alt="Original_Distrobution">
+
+              </div>
+
+              <div class="col-9">
+
+                  <img class="panel" src="static/images/Norm_distro.png" alt="Normal_Distrobution">
+
+              </div>
+
+            </div>
+
+            <div class="row" style="padding-bottom: 30px;">
+
+              <div class="col-9">
+
+                  <img class="panel" src="static/images/Correlation_Nate.png" alt="Correlation">
+
+              </div>
+              <div class="col-9">
+
+                  <img class="panel" src="static/images/Residual_Plot.png" alt="Residual Plot">
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

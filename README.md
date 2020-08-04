@@ -7,7 +7,7 @@ The business objective of this project was to design a tool that allows potentia
 
 This data used and the objective made this a supervised learning task, with multiple regression and batch learning.
 
-The team found a data set with 1,460 homes and 81 descriptive features, including the overall price of the home. The prices were not normally distribuoted so that data was first normalized using various techniques. Each model used a different normalization technique including a box cox tranformation and natural log. Also, there were close to 7,000 null values so those were eith removed, replaced with the median or replaced with the mean, depending on the situation.
+The team found a data set with 1,460 homes and 81 descriptive features, including the overall price of the home. The prices were not normally distributed so that data was first normalized using various techniques. Each model used a different normalization technique including a box cox transformation and natural log. Also, there were close to 7,000 null values so those were either removed or replaced with the median/mean, depending on the situation.
 
 The data included both categorical and numeric features. For the most part, the numerical features were used, but through one hot label encoding and manual changes, highly correlated categorical data was introduced.
 
